@@ -36,7 +36,7 @@ void chooseMain()
 
 void showProblemMenu()
 {
-	std::cout << "1 - get all grades\n";
+	std::cout << "1 - get all degrees\n";
 }
 
 void chooseProblem1()
