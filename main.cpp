@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "staticGraph.h"
+#include "dyna-graph.h"
 #include "utils.h"
 
 void showMainMenu();
@@ -64,7 +65,15 @@ void chooseProblem1()
 
 void chooseProblem2()
 {
-	std::cout << "Coming in the future\n";
+	showProblemMenu();
+
+	int n;
+	std::cout << "Number of vertexes in graph.. ";
+	std::cin >> n;
+
+	DynaGraph::Graph *first = 0;
+	DynaGraph::readGraph(first, n);
+	DynaGraph::printGraph(first);
 }
 
 int main()
