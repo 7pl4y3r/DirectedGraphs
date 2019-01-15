@@ -71,9 +71,13 @@ void chooseProblem2()
 	std::cout << "Number of vertexes in graph.. ";
 	std::cin >> n;
 
-	DynaGraph::Graph *first = 0;
-	DynaGraph::readGraph(first, n);
-	DynaGraph::printGraph(first);
+	DynaGraph graph(n);
+	graph.readGraph();
+	graph.printGraph();
+	
+	//DynaGraph::Graph *first = 0;
+	//DynaGraph::readGraph(first, n);
+	//DynaGraph::printGraph(first);
 }
 
 int main()
