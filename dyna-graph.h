@@ -97,6 +97,23 @@ class DynaGraph {
 			}
 			}
 		}
+	
+		int listSize(List *first)
+		{
+			int c = 0;
+			for (List *p = first; p; p = p->next)
+				c++;
+			
+			return c;
+		}
+	
+		void printDegrees()
+		{
+			for (Graph *p = first; p; p = p->next) {
+				
+				std::cout << "Node " << p->id << " degree is " << listSize(p->ancestors) + listSize(p->successors);
+			}	
+		}
 
 		void printList(List *first)
 		{
