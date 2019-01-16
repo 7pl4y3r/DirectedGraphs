@@ -46,8 +46,11 @@ void chooseProblem1()
 	
 	char option;
 	int n, m[6][6];
+	int m2[6][6];
 
 	Utils::readMatrixFromFile(m, n);
+	Utils::readMatrixFromFile2(m2, n);
+
 	do {
 	
 		std::cout << "problem id.. ";
@@ -56,7 +59,8 @@ void chooseProblem1()
 		switch (option) {
 		
 			case '1': StaticGraph::printDegrees(m, n); break;
-		
+			case '2': StaticGraph::printDegrees2(m2, n); break;
+
 		}
 	
 	} while (option != 'e');

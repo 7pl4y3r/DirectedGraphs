@@ -1,5 +1,7 @@
 #include <iostream>
 
+#include "list.h"
+
 class DynaGraph {
 
 	public:
