@@ -19,7 +19,14 @@ class StaticGraph {
 			}	
 			std::cout << '\n';
 		}	
-		
+		static void printNeighbors(int m[6][6], int n, int i, int M)
+		{
+			int s[20] = pred(m, n, i), p[20] = suc(m, n, i);
+			for (int j = 1; j <= n; j++) {
+				if (j != i && (s[j] == 1 || p[j] == 1))
+					std::cout << j << ' ';
+			}
+		}
 
 	private:
 
@@ -59,6 +66,21 @@ class StaticGraph {
 					s += m[i][k];
 			}
 			return s;
+		}
+	
+		static int pred[20](int m[6][6], int n, int i, int M)
+		{
+			for (int k = 1; k <= M; k++) {
+				if (m[i][k] == 1) {
+					for (int j = 1; j <= n; j++) {
+						if (j != i && )
+					
+					}
+						
+				
+				}
+			
+			}
 		}
 
 };
