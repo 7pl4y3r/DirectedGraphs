@@ -70,17 +70,36 @@ class StaticGraph {
 	
 		static int pred[20](int m[6][6], int n, int i, int M)
 		{
+			int v[20];
+			for (int i = 0; i < 20; i++)
+				v[i] = 0;
+			
 			for (int k = 1; k <= M; k++) {
 				if (m[i][k] == 1) {
 					for (int j = 1; j <= n; j++) {
-						if (j != i && )
-					
+						if (j != i && m[j][k] == -1)
+							p[j] = 1;		
 					}
-						
-				
 				}
-			
 			}
+			return v;
+		}
+	
+	static int pred[20](int m[6][6], int n, int i, int M)
+		{
+			int v[20];
+			for (int i = 0; i < 20; i++)
+				v[i] = 0;
+			
+			for (int k = 1; k <= M; k++) {
+				if (m[i][k] == -1) {
+					for (int j = 1; j <= n; j++) {
+						if (j != i && m[j][k] == 1)
+							p[j] = 1;		
+					}
+				}
+			}
+			return v;
 		}
 
 };
